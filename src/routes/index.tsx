@@ -20,10 +20,13 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Itália · Nepal · Butão · Índia · DRK Viagens" },
-      {
-        name: "description",
-        content: "Prévia de roteiro aéreo — Itália, Nepal, Butão e Índia. Proposta exclusiva para Fernanda Santoro · DRK Viagens.",
-      },
+      { name: "description", content: "Prévia de roteiro aéreo — Itália, Nepal, Butão e Índia. Proposta exclusiva para Fernanda Santoro · DRK Viagens." },
+      { property: "og:title", content: "Itália · Nepal · Butão · Índia · DRK Viagens" },
+      { property: "og:description", content: "Uma jornada de 23 dias pelos destinos mais exclusivos do planeta. Proposta exclusiva para Fernanda Santoro." },
+      { property: "og:image", content: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=85" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: Proposal,
