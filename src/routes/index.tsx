@@ -344,7 +344,7 @@ function Proposal() {
               <p className="mt-3 text-5xl font-bold">
                 12x <span className="text-gradient">R$ 1.836,79</span>
               </p>
-              <p className="mt-2 text-muted-foreground">Parcelamento em até 12 vezes sem juros.</p>
+              <p className="mt-2 text-muted-foreground">Parcelamento facilitado em até 12 vezes.</p>
             </Card>
           </div>
 
