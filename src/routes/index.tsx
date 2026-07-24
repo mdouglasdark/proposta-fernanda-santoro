@@ -10,7 +10,7 @@ import {
   Globe,
 } from "lucide-react";
 import flightImg from "@/assets/flight.jpg";
-import drkLogo from "@/assets/drk-logo.png.asset.json";
+const drkLogo = { url: "/drk-logo.png" };
 
 export const Route = createFileRoute("/")({
   head: () => ({
