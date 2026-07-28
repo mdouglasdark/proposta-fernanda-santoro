@@ -81,6 +81,104 @@ const destinations = [
   },
 ];
 
+// ─── Itinerary Data ────────────────────────────────────────────────────────────
+
+type DayItem = { time?: string; title: string; desc: string };
+type ItinDay = { date: string; weekday: string; flag: string; country: string; items: DayItem[] };
+
+const itinerary: ItinDay[] = [
+  // NEPAL
+  {
+    date: "04/nov", weekday: "Quarta", flag: "🇳🇵", country: "Nepal",
+    items: [
+      { time: "Manhã", title: "Chegada em Katmandu", desc: "Desembarque, transfer ao hotel, check-in e ambientação." },
+      { time: "Tarde", title: "Thamel", desc: "Primeiro contato com a vibrante vida local — lojas, cafés e a energia única da cidade." },
+      { time: "Noite", title: "Jantar nepalês", desc: "Culinária local com pratos típicos como Dal Bhat e Momo." },
+    ],
+  },
+  {
+    date: "05/nov", weekday: "Quinta", flag: "🇳🇵", country: "Nepal",
+    items: [
+      { time: "Manhã", title: "Boudhanath Stupa", desc: "Um dos maiores stupas budistas do mundo — Patrimônio UNESCO. Ritual de circuambulação com monges." },
+      { time: "Tarde", title: "Pashupatinath Temple", desc: "Templo hindu à beira do rio Bagmati, sagrado para os devotos de Shiva. Cremações sagradas às margens do rio." },
+      { time: "Final do dia", title: "Durbar Square", desc: "Praça histórica com palácios, templos e estátuas medievais no coração de Katmandu." },
+    ],
+  },
+  {
+    date: "06/nov", weekday: "Sexta", flag: "🇳🇵", country: "Nepal",
+    items: [
+      { time: "Manhã cedo", title: "Transfer ao aeroporto", desc: "Partida para Paro, Butão — voo cênico sobre os Himalaias." },
+    ],
+  },
+  // BUTÃO
+  {
+    date: "06/nov", weekday: "Sexta", flag: "🇧🇹", country: "Butão",
+    items: [
+      { time: "Tarde", title: "Chegada em Paro", desc: "Um dos aeroportos mais desafiadores do mundo, cercado por montanhas. Transfer e check-in." },
+      { time: "Final do dia", title: "Museu Nacional de Paro", desc: "Acervo de 2.000 anos de história e cultura butanesa em uma antiga torre de vigia." },
+    ],
+  },
+  {
+    date: "07/nov", weekday: "Sábado", flag: "🇧🇹", country: "Butão",
+    items: [
+      { time: "Manhã", title: "Tiger's Nest · Paro Taktsang", desc: "A trilha mais icônica do Butão — monastério agarrado a um penhasco a 3.120m de altitude. ~4h de caminhada." },
+      { time: "Tarde", title: "Descanso e contemplação", desc: "Vista panorâmica dos vales de Paro. Tarde livre para absorver a paz única do país da felicidade." },
+    ],
+  },
+  {
+    date: "08/nov", weekday: "Domingo", flag: "🇧🇹", country: "Butão",
+    items: [
+      { time: "Manhã", title: "Punakha Dzong", desc: "Fortaleza-monastério do século XVII na confluência de dois rios sagrados — considerada a mais bela do Butão." },
+      { time: "Tarde", title: "Aldeia de Lobesa", desc: "Passeio por campos de arroz e visita ao Templo da Fertilidade, um dos mais inusitados do país." },
+      { time: "Noite", title: "Jantar tradicional", desc: "Culinária butanesa com Ema Datshi (pimenta com queijo) e chá de manteiga de yak." },
+    ],
+  },
+  {
+    date: "09/nov", weekday: "Segunda", flag: "🇧🇹", country: "Butão",
+    items: [
+      { time: "Manhã cedo", title: "Transfer ao aeroporto", desc: "Partida para Nova Delhi, Índia." },
+    ],
+  },
+  // ÍNDIA
+  {
+    date: "09/nov", weekday: "Segunda", flag: "🇮🇳", country: "Índia",
+    items: [
+      { time: "Tarde", title: "Chegada em Nova Delhi", desc: "Transfer ao hotel, check-in. Ambientação na capital indiana." },
+      { time: "Final do dia", title: "India Gate e Rajpath", desc: "Passeio pelo coração cívico de Delhi — o grande arco do Memorial de Guerra e a Avenida das Cortes." },
+    ],
+  },
+  {
+    date: "10/nov", weekday: "Terça", flag: "🇮🇳", country: "Índia",
+    items: [
+      { time: "Manhã", title: "Old Delhi", desc: "Red Fort (Patrimônio UNESCO) e Jama Masjid — uma das maiores mesquitas da Índia." },
+      { time: "Tarde", title: "Chandni Chowk", desc: "Mergulho no mercado mais famoso de Delhi — especiarias, jóias, tecidos e street food inesquecível." },
+      { time: "Final do dia", title: "Lotus Temple", desc: "Templo Bahá'í em forma de flor de lótus — uma das construções mais fotografadas do mundo." },
+    ],
+  },
+  {
+    date: "11/nov", weekday: "Quarta", flag: "🇮🇳", country: "Índia",
+    items: [
+      { time: "Madrugada", title: "Partida para Agra", desc: "Saída às 5h para chegar ao Taj Mahal ao amanhecer — o momento mais especial da visita." },
+      { time: "Manhã", title: "Taj Mahal", desc: "Uma das 7 Maravilhas do Mundo. Tempo livre para contemplar e fotografar o mausoléu de mármore branco." },
+      { time: "Tarde", title: "Agra Fort e retorno", desc: "Visita à fortaleza de Akbar e retorno a Delhi à noite." },
+    ],
+  },
+  {
+    date: "12/nov", weekday: "Quinta", flag: "🇮🇳", country: "Índia",
+    items: [
+      { time: "Manhã", title: "Qutb Minar", desc: "Minarete do século XII, Patrimônio UNESCO — o mais alto do mundo em tijolos." },
+      { time: "Tarde", title: "Humayun's Tomb e Hauz Khas", desc: "Mausoléu mogol e o charmoso bairro de lagos e boutiques de design." },
+      { time: "Noite", title: "Jantar de despedida", desc: "Restaurante de alta gastronomia indiana para encerrar com elegância a jornada." },
+    ],
+  },
+  {
+    date: "13/nov", weekday: "Sexta", flag: "🇮🇳", country: "Índia",
+    items: [
+      { time: "Madrugada", title: "Transfer ao aeroporto", desc: "Partida de Nova Delhi às 01h55 rumo ao Brasil via Munique e São Paulo." },
+    ],
+  },
+];
+
 // ─── Flight Data ───────────────────────────────────────────────────────────────
 
 type Leg = {
@@ -371,6 +469,52 @@ function Proposal() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* ROTEIRO DIA A DIA */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-20 md:pb-28">
+        <div className="mb-12 max-w-2xl">
+          <span className="text-gradient text-sm font-semibold uppercase tracking-[0.25em]">Roteiro</span>
+          <h2 className="mt-3 text-3xl font-bold leading-tight md:text-5xl">
+            Dia a <span className="text-gradient">dia</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground">Nepal · Butão · Índia — 10 dias de imersão cultural.</p>
+        </div>
+
+        {(["🇳🇵", "🇧🇹", "🇮🇳"] as const).map((flag) => {
+          const days = itinerary.filter((d) => d.flag === flag);
+          const countryName = days[0]?.country;
+          return (
+            <div key={flag} className="mb-12">
+              <div className="mb-5 flex items-center gap-3">
+                <span className="text-3xl">{flag}</span>
+                <h3 className="text-2xl font-bold">{countryName}</h3>
+                <span className="h-px flex-1 bg-border" />
+              </div>
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {days.map((day, i) => (
+                  <div key={i} className="rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-elegant)]">
+                    <div className="mb-4 flex items-baseline justify-between">
+                      <span className="text-xl font-bold text-gradient">{day.date}</span>
+                      <span className="text-xs uppercase tracking-widest text-muted-foreground">{day.weekday}</span>
+                    </div>
+                    <ul className="space-y-3">
+                      {day.items.map((item, j) => (
+                        <li key={j} className="flex flex-col gap-0.5">
+                          {item.time && (
+                            <span className="text-xs font-semibold uppercase tracking-wider text-primary">{item.time}</span>
+                          )}
+                          <span className="text-sm font-semibold">{item.title}</span>
+                          <span className="text-xs text-muted-foreground">{item.desc}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </section>
 
       {/* ROTEIRO AÉREO */}
